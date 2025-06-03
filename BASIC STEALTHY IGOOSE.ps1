@@ -1,10 +1,10 @@
 $url = "https://github.com/Akeydeys/In/raw/main/Birth%20Goose.zip"
 
-$destination = [System.IO.Path]::Combine($env:TEMP, "Desktop-Goose-v0.31.zip")
+$destination = [System.IO.Path]::Combine($env:TEMP, "Birth-Goose.zip")
 
 Invoke-WebRequest -Uri $url -OutFile $destination
 
-$extractedFolder = [System.IO.Path]::Combine($env:TEMP, "Desktop-Goose-v0.31")
+$extractedFolder = [System.IO.Path]::Combine($env:TEMP, "Birth-Goose")
 Expand-Archive -Path $destination -DestinationPath $extractedFolder
 
 Remove-Item -Path $destination -Force
